@@ -33,6 +33,8 @@
             label2 = new Label();
             s1 = new Button();
             s2 = new Button();
+            label3 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // GenerujButton
@@ -83,11 +85,32 @@
             s2.UseVisualStyleBackColor = true;
             s2.Click += s2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(25, 193);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 5;
+            label3.Text = "label3";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(620, 193);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 6;
+            button1.Text = "S3 (QuickSort)";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(label3);
             Controls.Add(s2);
             Controls.Add(s1);
             Controls.Add(label2);
@@ -107,5 +130,7 @@
         private Label label2;
         private Button s1;
         private Button s2;
+        private Label label3;
+        private Button button1;
     }
 }

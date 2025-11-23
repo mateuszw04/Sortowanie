@@ -9,39 +9,39 @@ namespace Sortowanie
     internal class QuickSort
     {
 
-        public static void sort(int[] arr, int left, int right)
+        public void Sort(int[] tab, int l, int r)
         {
-            if (left < right)
+            if (l < r)
             {
-                int pivot = partycja(arr, left, right);
-                sort(arr, left, pivot - 1);
-                sort(arr, pivot + 1, right);
+                int pivot = partycja(tab, l, r);
+                Sort(tab, l, pivot - 1);
+                Sort(tab, pivot + 1, r);
             }
         }
 
-        private static int partycja(int[] arr, int l, int r)
+        private static int partycja(int[] tab, int l, int r)
         {
-            int pivot = arr[r];
+            int pivot = tab[r];
             int i = l - 1;
 
             for (int j = l; j < r; j++)
             {
-                if (arr[j] <= pivot)
+                if (tab[j] <= pivot)
                 {
                     i++;
-                    swap(arr, i, j);
+                    swap(tab, i, j);
                 }
             }
 
-            swap(arr, i + 1, r);
+            swap(tab, i + 1, r);
             return i + 1;
         }
 
-        private static void swap(int[] arr, int i, int j)
+        private static void swap(int[] tab, int i, int j)
         {
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+            int temp = tab[i];
+            tab[i] = tab[j];
+            tab[j] = temp;
         }
 
     }
